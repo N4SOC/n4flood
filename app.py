@@ -13,6 +13,8 @@ def showstatus():
     return json.dumps({"riverlevels":levels})
     #{'Derby St Marys FLOW - level-stage-i-15_min-mASD': 1.402, 'Yorkshire Bridge LVL - level-stage-i-15_min-mASD': 0.863, 'Matlock LVL - level-stage-i-15_min-mASD': 1.934, 'Mytham Bridge LVL - level-stage-i-15_min-mASD': 1.46, 'Chatsworth LVL - level-stage-i-15_min-mASD': 1.786}
 
+@app.route('/healthcheck')
+    return {'status': 'alive'}
 
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
