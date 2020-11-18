@@ -23,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: user/n4flood:latest
+          tags: registry.n4monitoring.co.uk/n4flood:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
